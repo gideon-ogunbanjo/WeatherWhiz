@@ -12,7 +12,7 @@ root.resizable(0,0) # making the window size fixed
 
 #title of the window
 
-root.title("Weather App - AskPython.com") 
+root.title("Weather App - Gideon Ogunbanjo") 
 
 city_value = StringVar()
  
@@ -42,7 +42,7 @@ def showWeather():
     if weather_info['cod'] == 200:
         kelvin = 273 # value of kelvin
  
-#-----------Storing the fetched values of weather of a city
+#----------- storing the fetched values of weather of a city
  
         temp = int(weather_info['main']['temp'] - kelvin)                                     #converting default kelvin value to Celcius
         feels_like_temp = int(weather_info['main']['feels_like'] - kelvin)
@@ -58,7 +58,7 @@ def showWeather():
         sunrise_time = time_format_for_location(sunrise + timezone)
         sunset_time = time_format_for_location(sunset + timezone)
  
-#assigning Values to our weather varaible, to display as output
+# assigning Values to our weather varaible, to display as output
          
         weather = f"\nWeather of: {city_name}\nTemperature (Celsius): {temp}°\nFeels like in (Celsius): {feels_like_temp}°\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time} and Sunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
     else:
@@ -68,7 +68,7 @@ def showWeather():
 
 
 # adding functionalities to change the time format, this function checks for the local time as compared to the UTC(Universal Time Coordinated) in which the API give
-# s the output to the time format as per our location. Ex. UTC to IST.    
+# the output to the time format as per our location. Ex. UTC to IST.    
 def time_format_for_location(utc_with_tz):
     local_time = datetime.utcfromtimestamp(utc_with_tz)
     return local_time.time()
