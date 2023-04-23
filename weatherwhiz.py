@@ -75,7 +75,7 @@ def time_format_for_location(utc_with_tz):
 
 # creating the GUI
 
-city_head= Label(root, text = 'Enter City Name', font = 'Arial 12 bold').pack(pady=10) #to generate label heading
+city_head= Label(root, text = 'Enter Country/City Name', font = 'Arial 12 bold').pack(pady=10) #to generate label heading
  
 inp_city = Entry(root, textvariable = city_value,  width = 24, font='Arial 14 bold').pack() #entry field
 
