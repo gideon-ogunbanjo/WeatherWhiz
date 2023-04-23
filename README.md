@@ -12,7 +12,7 @@ WeatherWhiz is a weather app that uses Open Weather Map API to fetch the latest 
 - Detailed information: WeatherWhiz provides detailed information about weather conditions such as the sunrise and sunset time, humidity, visibility, and atmospheric pressure.
 
 ### API
-WeatherWhiz uses [Open Weather Map API](https://openweathermap.org/api) to fetch the latest weather information for cities and places around the globe. Open Weather Map API provides accurate and up-to-date weather data in real-time.
+WeatherWhiz uses [Open Weather Map API](https://openweathermap.org/api) to fetch the latest weather information for cities and places around the globe. Open Weather Map API provides accurate and up-to-date extensive weather data in real-time.
 
 ### Date Created
 April 2023
