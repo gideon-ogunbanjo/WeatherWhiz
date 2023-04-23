@@ -42,7 +42,7 @@ def showWeather():
     if weather_info['cod'] == 200:
         kelvin = 273 # value of kelvin
  
-#----------- storing the fetched values of weather of a city
+#----------- storing the fetched values of weather of a Country
  
         temp = int(weather_info['main']['temp'] - kelvin)                                     # converting the default kelvin value to Celcius
         feels_like_temp = int(weather_info['main']['feels_like'] - kelvin)
@@ -62,7 +62,7 @@ def showWeather():
          
         weather = f"\nWeather of: {city_name}\nTemperature (Celsius): {temp}°\nFeels like in (Celsius): {feels_like_temp}°\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time} and Sunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
     else:
-        weather = f"\n\tWeather for '{city_name}' not found!\n\tKindly Enter valid City Name !!"
+        weather = f"\n\tWeather for '{city_name}' not found!\n\tKindly Enter valid Country Name !!"
  
     tfield.insert(INSERT, weather)   # used to insert or send value in our Text Field to display output
 
