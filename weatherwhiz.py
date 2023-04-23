@@ -21,7 +21,7 @@ def showWeather():
 # entering the api key, copies from the OpenWeatherMap dashboard
     api_key = "34a2c3b4a0568b76a15230c66d6ba5f0"  #sample API key
  
-    # get city name from user from the input field
+    # get location name from user from the input field
     city_name = city_value.get()
  
     # API url
@@ -75,11 +75,11 @@ def time_format_for_location(utc_with_tz):
 
 # creating the GUI
 
-city_head= Label(root, text = 'Enter Country/City Name', font = 'Arial 12 bold').pack(pady=10) #to generate label heading
+city_head= Label(root, text = 'Enter Location', font = 'Arial 12 bold').pack(pady=10) #to generate label heading
  
 inp_city = Entry(root, textvariable = city_value,  width = 24, font='Arial 14 bold').pack() #entry field
 
-# weather button which we click to check the weather of the user inputted city
+# weather button which we click to check the weather of the user inputted location
 Button(root, command = showWeather, text = "Check Weather", font="Arial 10", bg='lightblue', fg='black', activebackground="teal", padx=5, pady=5 ).pack(pady= 20)
 
 weather_now = Label(root, text = "The Weather is: ", font = 'arial 12 bold').pack(pady=10)
