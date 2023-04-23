@@ -19,18 +19,18 @@ city_value = StringVar()
 def showWeather():
  
 # entering the api key, copies from the OpenWeatherMap dashboard
-    api_key = "34a2c3b4a0568b76a15230c66d6ba5f0"  #sample API
+    api_key = "34a2c3b4a0568b76a15230c66d6ba5f0"  #sample API key
  
-    # get city name from user from the input field (later in the code)
+    # get city name from user from the input field
     city_name = city_value.get()
  
     # API url
     weather_url = 'http://api.openweathermap.org/data/2.5/weather?q=' + city_name + '&appid='+api_key
  
-    # getting the response from fetched url
+    # getting the response from the fetched url
     response = requests.get(weather_url)
  
-    # changing response from json to python readable 
+    # changing response from json to python 
     weather_info = response.json()
  
  
@@ -44,7 +44,7 @@ def showWeather():
  
 #----------- storing the fetched values of weather of a city
  
-        temp = int(weather_info['main']['temp'] - kelvin)                                     #converting default kelvin value to Celcius
+        temp = int(weather_info['main']['temp'] - kelvin)                                     # converting the default kelvin value to Celcius
         feels_like_temp = int(weather_info['main']['feels_like'] - kelvin)
         pressure = weather_info['main']['pressure']
         humidity = weather_info['main']['humidity']
@@ -58,7 +58,7 @@ def showWeather():
         sunrise_time = time_format_for_location(sunrise + timezone)
         sunset_time = time_format_for_location(sunset + timezone)
  
-# assigning Values to our weather varaible, to display as output
+# assigning Values to our weather varaible, to display as an output
          
         weather = f"\nWeather of: {city_name}\nTemperature (Celsius): {temp}°\nFeels like in (Celsius): {feels_like_temp}°\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time} and Sunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
     else:
@@ -67,8 +67,7 @@ def showWeather():
     tfield.insert(INSERT, weather)   # used to insert or send value in our Text Field to display output
 
 
-# adding functionalities to change the time format, this function checks for the local time as compared to the UTC(Universal Time Coordinated) in which the API give
-# the output to the time format as per our location. Ex. UTC to IST.    
+# adding functionalities to change the time format, this function checks for the local time as compared to the UTC(Universal Time Coordinated) in which the API gives the output to the time format as per our location. Ex. UTC to IST.    
 def time_format_for_location(utc_with_tz):
     local_time = datetime.utcfromtimestamp(utc_with_tz)
     return local_time.time()
