@@ -8,9 +8,8 @@ WeatherWhiz is a weather app that uses Open Weather Map API to fetch the latest 
 
 - Weather forecast: WeatherWhiz also provides you with a weather forecast for the next 7 days. The forecast includes information about the temperature, humidity, wind speed, and chance of precipitation.
 
-- Multiple locations: WeatherWhiz allows you to add multiple locations to your list of favorites. This feature helps you stay up-to-date with the weather conditions in your favorite places.
-
-- Detailed information: WeatherWhiz provides detailed information about weather conditions such as the sunrise and sunset time, UV index, visibility, and atmospheric pressure.
+- Multiple locations: WeatherWhiz allows you to search multiple locations. It is not just limited to a particular continent or area, it covers every geographical country/city on the globe.
+- Detailed information: WeatherWhiz provides detailed information about weather conditions such as the sunrise and sunset time, humidity, visibility, and atmospheric pressure.
 
 ### API
 WeatherWhiz uses [Open Weather Map API](https://openweathermap.org/api) to fetch the latest weather information for cities and places around the globe. Open Weather Map API provides accurate and up-to-date weather data in real-time.
