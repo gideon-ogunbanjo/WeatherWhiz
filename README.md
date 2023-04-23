@@ -19,4 +19,3 @@ April 2023
 
 ### Creator
 Gideon Ogunbanjo
-Open Weather Map API
