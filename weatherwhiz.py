@@ -64,8 +64,20 @@ def showWeather():
     else:
         weather = f"\n\tWeather for '{city_name}' not found!\n\tKindly Enter valid City Name !!"
  
+    tfield.insert(INSERT, weather)   # used to insert or send value in our Text Field to display output
+
+
+# adding functionalities to change the time format, this function checks for the local time as compared to the UTC(Universal Time Coordinated) in which the API give
+# s the output to the time format as per our location. Ex. UTC to IST.    
+def time_format_for_location(utc_with_tz):
+    local_time = datetime.utcfromtimestamp(utc_with_tz)
+    return local_time.time()
+
+
+# creating the GUI
+
+city_head= Label(root, text = 'Enter City Name', font = 'Arial 12 bold').pack(pady=10) #to generate label heading
  
- 
-    tfield.insert(INSERT, weather)   #to insert or send value in our Text Field to display output
-    
-    
+inp_city = Entry(root, textvariable = city_value,  width = 24, font='Arial 14 bold').pack() #entry field
+
+#
