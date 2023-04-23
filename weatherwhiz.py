@@ -80,4 +80,10 @@ city_head= Label(root, text = 'Enter City Name', font = 'Arial 12 bold').pack(pa
  
 inp_city = Entry(root, textvariable = city_value,  width = 24, font='Arial 14 bold').pack() #entry field
 
-#
+# weather button which we click to check the weather of the user inputted city
+Button(root, command = showWeather, text = "Check Weather", font="Arial 10", bg='lightblue', fg='black', activebackground="teal", padx=5, pady=5 ).pack(pady= 20)
+
+weather_now = Label(root, text = "The Weather is: ", font = 'arial 12 bold').pack(pady=10)
+ 
+tfield = Text(root, width=46, height=10)
+tfield.pack()
