@@ -3,6 +3,7 @@ from tkinter import *
 import requests
 import json
 from datetime import datetime
+import httplib2
 
 # initializing the window
 root = Tk()
@@ -53,8 +54,18 @@ def showWeather():
 
         # assigning Values to our weather variable, to display as an output
         weather = f"\nWeather of: {city_name}\nTemperature (Celsius): {temp}°\nEstimated degree in (Celsius): {feels_like_temp}°\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time}, and Sunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
+    elif weather == "No internet conection": 
+        def have_internet():
+            conn = httplib2.HTTPSConnection("8888.google", timeout=5)
+            try:
+                conn.request("HEAD", "/")
+                return True
+            except Exception:
+                return False
+            finally:
+                conn.close()
     else:
-        weather = f"\n\tWeather for '{city_name}' not found!\n\tKindly Enter valid Location Name,\n\tor check your interner conection"
+        weather = f"\n\tWeather for '{city_name}' not found!\n\tKindly Enter valid Location Name,\n\tor check your internet conection"
 
     tfield.insert(INSERT, weather)  # used to insert or send value in our Text Field to display output
 
@@ -75,5 +86,8 @@ weather_now = Label(root, text = "The Weather is: ", font = 'arial 12 bold').pac
  
 tfield = Text(root, width=46, height=10)
 tfield.pack()
+
+
+
 
 root.mainloop()
