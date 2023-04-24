@@ -10,7 +10,7 @@ root.geometry("400x400")  # size of the window by default
 root.resizable(0, 0)  # making the window size fixed
 
 # title of the window
-root.title("WeatherWhiz")
+root.title("WeatherWhiz ☁️")
 
 city_value = StringVar()
 
@@ -54,7 +54,7 @@ def showWeather():
         # assigning Values to our weather variable, to display as an output
         weather = f"\nWeather of: {city_name}\nTemperature (Celsius): {temp}°\nEstimated degree in (Celsius): {feels_like_temp}°\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time}, and Sunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
     else:
-        weather = f"\n\tWeather for '{city_name}' not found!\n\tKindly Enter valid Location Name !!"
+        weather = f"\n\tWeather for '{city_name}' not found!\n\tKindly Enter valid Location Name,\n\tor check your interner conection"
 
     tfield.insert(INSERT, weather)  # used to insert or send value in our Text Field to display output
 
