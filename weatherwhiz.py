@@ -54,6 +54,7 @@ def showWeather():
 
         # assigning Values to our weather variable, to display as an output
         weather = f"\nWeather of: {city_name}\nTemperature (Celsius): {temp}°\nEstimated degree in (Celsius): {feels_like_temp}°\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time}, and Sunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
+    #creating an exception for internet conection error
     elif weather == "No internet conection": 
         def have_internet():
             conn = httplib2.HTTPSConnection("8888.google", timeout=5)
