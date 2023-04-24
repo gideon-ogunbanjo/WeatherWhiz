@@ -12,7 +12,7 @@ root.resizable(0,0) # making the window size fixed
 
 #title of the window
 
-root.title("WheatherWhiz") 
+root.title("WeatherWhiz") 
 
 city_value = StringVar()
  
