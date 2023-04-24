@@ -17,7 +17,7 @@ city_value = StringVar()
 
 def showWeather():
     # entering the api key, copies from the OpenWeatherMap dashboard
-    api_key = ""  # my API Key (indisclosable)
+    api_key = "34a2c3b4a0568b76a15230c66d6ba5f0"  # my API Key (indisclosable)
 
     # get location name from user from the input field
     city_name = city_value.get()
@@ -53,7 +53,7 @@ def showWeather():
         sunset_time = time_format_for_location(sunset + timezone)
 
         # assigning Values to our weather variable, to display as an output
-        weather = f"\nWeather of: {city_name}\nTemperature (Celsius): {temp}°\nEstimated degree in (Celsius): {feels_like_temp}°\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time}, and Sunset at {sunset_time}\nCloud: {cloudy}%\nInfo: {description}"
+        weather = f"\nDetailed Weather of {city_name}\nTemperature (Celsius): {temp}°\nEstimated degree in (Celsius): {feels_like_temp}°\nPressure: {pressure} hPa\nHumidity: {humidity}%\nSunrise at {sunrise_time}, and Sunset at {sunset_time}\nCloud: {cloudy}%\nSummary: {description}"
     #creating an exception for internet conection error
     elif weather == "No internet conection": 
         def have_internet():
