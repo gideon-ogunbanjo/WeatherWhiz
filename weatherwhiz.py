@@ -88,4 +88,4 @@ tfield = Text(root, width=46, height=10)
 tfield.pack()
 
 root.mainloop()
-#Gideon Ogunbanjo
+# made by Gideon Ogunbanjo...
