@@ -9,8 +9,8 @@ st.set_page_config(
 )
 
 # OpenWeatherMap API key and base URL
-API_KEY = "318ae3121b4219f5dc3243d9693c7146"
-BASE_URL = "http://api.openweathermap.org/data/2.5/weather"
+API_KEY = "4fd6435aa34e0426c6dd33e6462f6fa2"
+BASE_URL = "http://api.openweathermap.org/data/2.5/weather?q="
 
 def get_weather(city):
     params = {
