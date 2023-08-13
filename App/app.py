@@ -38,3 +38,6 @@ if st.button("Get Weather Information"):
     else:
         st.write("Location not found.")
 
+# Footer with link
+link = 'Created by [Gideon Ogunbanjo](https://gideonogunbanjo.netlify.app)'
+st.markdown(link, unsafe_allow_html=True)
